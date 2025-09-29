@@ -1,0 +1,23 @@
+{
+  "name": "js-from-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aslyadneva/js-from-scratch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aslyadneva/js-from-scratch/issues"
+  },
+  "homepage": "https://github.com/aslyadneva/js-from-scratch#readme",
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}
