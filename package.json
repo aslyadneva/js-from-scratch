@@ -8,6 +8,7 @@
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aslyadneva/js-from-scratch.git"
@@ -23,7 +24,9 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13"
   }
 }
