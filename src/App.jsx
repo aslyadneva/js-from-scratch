@@ -1,13 +1,11 @@
-import Sidebar from "./Sidebar";
-import MainContent from "./MainContent";
+import StyleGuide from "./blocks/StyleGuide";
+import Header from "./blocks/Header";
 
 function App() {
-  // const [sidebarOpen, setSidebarOpen] = useState(false)
-
   return (
     <>
-      <Sidebar />
-      <MainContent />
+      <Header />
+      <StyleGuide />
     </>
   );
 }
