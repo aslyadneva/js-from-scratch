@@ -1,35 +1,9 @@
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Line,
-  LineChart,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Landmark } from "lucide-react";
 import CustomTable from "./CustomTable";
-import { Card, CardHeader } from "../components/Card";
+import CustomLineChart from "./CustomLineChart";
+import CustomBarChart from "./CustomBarChart";
+import { Card, CardContent, CardHeader } from "../components/Card";
 import { ChartContainer } from "../components/Chart";
-
-const data = [
-  { period: "Jan", expenses: 3200, income: 5400, net: 2200 },
-  { period: "Feb", expenses: 2900, income: 5100, net: 2200 },
-  { period: "Mar", expenses: 3100, income: 5600, net: 2500 },
-  { period: "Apr", expenses: 3500, income: 5800, net: 2300 },
-  { period: "May", expenses: 3700, income: 6200, net: 2500 },
-  { period: "Jun", expenses: 4000, income: 6400, net: 2400 },
-  { period: "Jul", expenses: 4200, income: 6800, net: 2600 },
-  { period: "Aug", expenses: 3900, income: 7000, net: 3100 },
-];
-
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
 
 export default function StyleGuide() {
   return (
@@ -117,36 +91,7 @@ export default function StyleGuide() {
                 </div>
               </CardHeader>
               <div className="px-6 pb-6">
-                <ChartContainer>
-                  <BarChart
-                    // width={400}
-                    // height={300}
-                    // accessibilityLayer
-                    data={chartData}
-                  >
-                    <CartesianGrid vertical={false} />
-                    <XAxis
-                      dataKey="month"
-                      tickLine={false}
-                      tickMargin={10}
-                      axisLine={false}
-                      tickFormatter={(value) => value.slice(0, 3)}
-                    />
-                    <YAxis
-                      // dataKey="month"
-                      // type="category"
-                      tickLine={false}
-                      tickMargin={10}
-                      axisLine={false}
-                      orientation="right"
-                      tickFormatter={(value) => `${value}k`}
-                    />
-                    {/* <ChartTooltip content={<ChartTooltipContent />} />
-            <ChartLegend content={<ChartLegendContent />} /> */}
-                    <Bar dataKey="desktop" fill="var(--primary)" radius={4} />
-                    <Bar dataKey="mobile" fill="var(--chart-2)" radius={4} />
-                  </BarChart>
-                </ChartContainer>
+                <CustomBarChart />
               </div>
             </Card>
           </div>
@@ -170,67 +115,7 @@ export default function StyleGuide() {
               </CardHeader>
 
               <div className="px-6 pb-6">
-                <ChartContainer>
-                  <LineChart
-                    // width={400}
-                    // height={300}
-                    data={data}
-                    margin={{
-                      left: 12,
-                      right: 12,
-                    }}
-                  >
-                    <CartesianGrid vertical={false} />
-                    <XAxis
-                      dataKey="period"
-                      tickLine={false}
-                      axisLine={false}
-                      tickMargin={8}
-                      interval={2}
-                      // tickFormatter={(value) => value.slice(0, 3)}
-                    />
-                    <YAxis
-                      // dataKey="month"
-                      // type="category"
-                      tickLine={false}
-                      tickMargin={10}
-                      axisLine={false}
-                      orientation="right"
-                      tickFormatter={(value) => `${value}k`}
-                    />
-                    {/* <XAxis
-                  dataKey="period"
-                 
-                /> */}
-                    <Line
-                      type="monotone"
-                      dataKey="income"
-                      stroke="var(--primary)"
-                      strokeWidth={2}
-                      dot={{
-                        fill: "var(--primary)",
-                      }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="expenses"
-                      stroke="var(--chart-2)"
-                      strokeWidth={2}
-                      dot={{
-                        fill: "var(--chart-2)",
-                      }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="net"
-                      stroke="var(--chart-3)"
-                      strokeWidth={2}
-                      dot={{
-                        fill: "var(--chart-3)",
-                      }}
-                    />
-                  </LineChart>
-                </ChartContainer>
+                <CustomLineChart />
               </div>
             </Card>
           </div>
@@ -245,6 +130,74 @@ export default function StyleGuide() {
                   $15,231.80
                 </div>
               </CardHeader>
+              <CardContent>
+                <ul className="">
+                  <li className="flex items-start gap-3 py-4">
+                    <span className="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-chart-1 inline-flex w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-md border border-transparent p-1 text-xs font-medium whitespace-nowrap text-white transition-[color,box-shadow] focus-visible:ring-[3px] [&>svg]:pointer-events-none [&>svg]:size-3">
+                      <Landmark
+                      // size={18}
+                      // color="red"
+                      />
+                    </span>
+
+                    <div className="flex-auto">
+                      <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                        Savings Account
+                      </p>
+                      <p className="mt-1 text-sm text-[var(--muted-foreground)]">
+                        Bank of America
+                      </p>
+                    </div>
+
+                    <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                      $12,396.12
+                    </p>
+                  </li>
+
+                  <li className="flex items-start gap-3 py-4">
+                    <span className="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-chart-4 inline-flex w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full border border-transparent p-1 text-xs font-medium whitespace-nowrap text-white transition-[color,box-shadow] focus-visible:ring-[3px] [&>svg]:pointer-events-none [&>svg]:size-3">
+                      <Landmark
+                      // size={18}
+                      // color="red"
+                      />
+                    </span>
+
+                    <div className="flex-auto">
+                      <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                        Checking Account
+                      </p>
+                      <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+                        Bank of America
+                      </p>
+                    </div>
+
+                    <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                      $12,396.12
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3 py-4">
+                    <span className="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-chart-5 inline-flex w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full border border-transparent p-1 text-xs font-medium whitespace-nowrap text-white transition-[color,box-shadow] focus-visible:ring-[3px] [&>svg]:pointer-events-none [&>svg]:size-3">
+                      <Landmark
+                      // size={18}
+                      // color="red"
+                      />
+                    </span>
+
+                    <div className="flex-auto">
+                      <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                        Billing Account
+                      </p>
+                      <p className="mt-1 text-sm text-[var(--muted-foreground)]">
+                        Chase
+                      </p>
+                    </div>
+
+                    <p className="text-sm font-semibold text-[var(--card-foreground)]">
+                      $12,396.12
+                    </p>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
           </div>
         </div>

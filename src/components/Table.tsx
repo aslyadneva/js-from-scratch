@@ -6,9 +6,9 @@ function Table({ className, ...props }: React.ComponentProps<"table">) {
     >
       <table
         data-slot="table"
-        className="w-full caption-bottom text-sm "
+        className="w-full caption-bottom text-sm"
         {...props}
-      />
+      ></table>
     </div>
   );
 }
@@ -21,7 +21,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       data-slot="table-row"
-      className="hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-[var(--border)] transition-colors "
+      className="hover:bg-muted/50 data-[state=selected]:bg-muted border-b border-[var(--border)] transition-colors"
       {...props}
     />
   );
@@ -32,7 +32,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       scope="col"
-      className="px-3 py-3.5 text-left text-sm font-semibold text-[var(--card-foreground)]"
+      className={`px-3 py-3.5 text-left text-sm font-semibold text-[var(--card-foreground)] ${className}`}
       {...props}
     />
   );

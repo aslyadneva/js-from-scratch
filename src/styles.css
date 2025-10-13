@@ -188,6 +188,12 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+@layer base {
+  body {
+    background-color: var(--background);
+  }
+}
+
 @layer components {
   .nav-item {
     @apply inline-flex items-center border-b-2 border-transparent px-3 py-1 text-sm font-medium text-[var(--muted-foreground)];
