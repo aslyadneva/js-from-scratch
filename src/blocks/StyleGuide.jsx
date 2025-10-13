@@ -5,6 +5,15 @@ import CustomBarChart from "./CustomBarChart";
 import { Card, CardContent, CardHeader } from "../components/Card";
 import { ChartContainer } from "../components/Chart";
 
+const chartData = [
+  { month: "January", desktop: 186, mobile: 80 },
+  { month: "February", desktop: 305, mobile: 200 },
+  { month: "March", desktop: 237, mobile: 120 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 130 },
+  { month: "June", desktop: 214, mobile: 140 },
+];
+
 export default function StyleGuide() {
   return (
     <>
@@ -91,7 +100,7 @@ export default function StyleGuide() {
                 </div>
               </CardHeader>
               <div className="px-6 pb-6">
-                <CustomBarChart />
+                <CustomBarChart data={chartData} />
               </div>
             </Card>
           </div>

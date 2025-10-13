@@ -33,6 +33,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/react-router-devtools": "^1.132.51",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/router": "^0.0.1-beta.53",
     "class-variance-authority": "^0.7.1",
