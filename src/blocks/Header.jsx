@@ -33,7 +33,7 @@ export default function Header() {
         ))}
       </div>
 
-      <div className="group relative mr-6 inline-flex w-11 shrink-0 self-center rounded-full bg-[var(--input)] p-0.5 inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-[var(--primary)] has-focus-visible:outline-2">
+      <div className="group relative mr-6 ml-2 inline-flex w-11 shrink-0 self-center rounded-full bg-[var(--input)] p-0.5 inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-[var(--primary)] has-focus-visible:outline-2">
         <span className="size-5 rounded-full bg-[var(--background)] shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-5" />
         <input
           name="setting"
