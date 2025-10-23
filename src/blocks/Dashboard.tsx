@@ -110,9 +110,9 @@ function Dashboard() {
   return (
     <div className="mx-auto my-8 flex max-w-7xl flex-col gap-4 px-4 md:my-20">
       {/* Stats Grid */}
-      <div className="grid max-w-4xl gap-4">
+      <div className="grid max-w-4xl gap-4 sm:grid-flow-col">
         {/* Income */}
-        <div className="row-start-1 row-end-3">
+        <div>
           <Card>
             <CardHeader>
               <div className="leading-none font-semibold tracking-tight text-[var(--card-foreground)]">
@@ -128,7 +128,7 @@ function Dashboard() {
           </Card>
         </div>
         {/* Expense */}
-        <div className="row-start-1 row-end-3">
+        <div className="">
           <Card>
             <CardHeader>
               <div className="leading-none font-semibold tracking-tight text-[var(--card-foreground)]">
@@ -145,7 +145,7 @@ function Dashboard() {
         </div>
 
         {/* Net */}
-        <div className="row-start-1 row-end-3">
+        <div className="">
           <Card>
             <CardHeader>
               <div className="leading-none font-semibold tracking-tight text-[var(--card-foreground)]">
@@ -163,9 +163,9 @@ function Dashboard() {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid gap-4 md:grid-cols-3">
         {/* Line Chart */}
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <Card>
             <CardHeader>
               <h3 className="text-lg font-semibold tracking-tight text-[var(--card-foreground)]">
@@ -199,7 +199,7 @@ function Dashboard() {
         </div>
 
         {/*  Bank Accounts Card */}
-        <div className="col-start-3">
+        <div className="md:col-start-3">
           <Card>
             <CardHeader>
               <div className="leading-none font-semibold tracking-tight text-[var(--card-foreground)]">
@@ -227,7 +227,7 @@ function Dashboard() {
         </div>
 
         {/* Bank Transactions */}
-        <div className="col-span-2 row-start-2">
+        <div className="min-w-0 md:col-span-2 md:row-start-2">
           <Card>
             <CardHeader>
               <div className="text-2xl font-semibold tracking-tight text-[var(--card-foreground)]">
